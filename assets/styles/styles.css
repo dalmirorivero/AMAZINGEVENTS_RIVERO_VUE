@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* ELEMENTOS DEL HEADER */
+
+header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    padding-bottom: 0;
+}
+
+nav>a {
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+    color: #d90368;
+    margin: 10px;
+}
+
+.logo {
+    width: 200px;
+}
+
+/* ELEMENTOS DEL MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+section>a {
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    margin: 10px;
+}
+
+section>h1:hover {
+    text-shadow: 0px 0px 25px #d90368;
+}
+
+input {
+    cursor: pointer;
+    margin: 10px;
+}
+
+input[type="search" i] {
+    cursor: text;
+    width: 400px;
+}
+
+.form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1%;
+
+}
+
+.button {
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    /* background-color: #000000; */
+    margin-top: 5px;
+    padding: 0px 55px;
+    border: 2px solid black;
+    border-radius: 5px;
+    border-width: 100%;
+    width: 100%;
+}
+
+.button:hover {
+    background-color:#d90368;
+    color:#ffffff;
+    /* opacity: 0.7; */
+}
+
+.events {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 2%;
+
+}
+
+.card {
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 #000000;
+    max-width: 300px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+}
+
+.title {
+    color: #d90368;
+    font-size: 18px;
+}
+
+/* ELEMENTOS DEL FOOTER */
+
+figure>a {
+    text-decoration: none;
+    color: #000000;
+    margin: 10px;
+    font-size: 25px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: auto;
+    border-top: 5px solid #d90368;
+    padding: 1%;
+}
+
+h2 {
+    margin-right: 5px;
+}

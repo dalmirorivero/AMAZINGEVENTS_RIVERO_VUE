@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <script src="https://kit.fontawesome.com/9201b68bd2.js" crossorigin="anonymous">
+    </script>
+    <title>Amazing Events</title>
+</head>
+<body>
+    <header>
+        <figure>
+          <img class="logo" src="./assets/img/Logo-Amazing-Events.png" alt="logo">
+        </figure>
+        <nav>
+          <a href="#">HOME</a>
+          <a href="./pages/upcoming.html">UPCOMING EVENTS</a>
+          <a href="./pages/past.html">PAST EVENTS</a>
+          <a href="./pages/contact.html">CONTACT</a>
+          <a href="./pages/stats.html">STATS</a>
+        </nav>
+      </header>
+      <main>
+        <section>
+          <a href="./pages/stats.html">
+            <i class="fa-solid fa-arrow-left"></i>
+          </a>
+          <h1>HOME</h1>
+          <a href="./pages/upcoming.html"
+            ><i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </section>
+    <div id="app">
+       
+        <div class="form">
+            <form>
+                <template v-if="categories" v-for="categorie of categories">
+                    <label>
+                    <input type="checkbox" v-on:change="filtro" v-bind:value="categorie" v-model="checked">
+                    {{categorie}}
+                    </label>
+                </template>
+                
+            </form>
+            <form>
+                <input type="search" v-on:keyup="filtro" v-model="searchValue" id="search" placeholder=" Search for your perfect event!">
+                <label for="search"
+                  ><i class="fa-sharp fa-solid fa-magnifying-glass"></i
+                ></label>
+              </form>
+              
+        </div>
+        <div class="events">
+<template v-if="filterEvents.length > 0" v-for="evento of filterEvents">
+
+    <div class="card">
+        <img v-bind:src="evento.image" style="width: 250px; height: 150px;">
+        <h1>{{evento.name}}</h1>
+        <p class="title">
+          {{evento.category}}
+        </p>
+        <p>PRICE: ${{evento.price}}</p>
+        <p style="padding: 5px; font-weight: bold;"><a :href="'../pages/details.html?_id=' + evento._id" class="button">MORE INFO</a></p>
+      </div>
+
+</template>
+<template v-else>
+<div>
+    <h2> No matches events found!</h2>
+</div>
+</template>
+</div>
+    </div>
+    </main>
+    <footer>
+        <figure>
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+        </figure>
+        <section>
+          <h2>FE06-TN</h2>
+        </section>
+      </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
